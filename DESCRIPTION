@@ -1,12 +1,12 @@
 Package: foo
-Title: What the Package Does (one line, title case)
+Title: Binding and Reordering characters
 Version: 0.0.0.9000
 Authors@R: person("Aria", "Guo", email = "aria.guo@example.com", role = c("aut", "cre"))
-Description: three functions for :binding factors; count the fequency of a value; reorder letters alphabetically.
+Description: two functions for :binding character with unique value; reorder letters alphabetically.
 Depends: R (>= 3.2.2)
 License: MIT+ file LICENSE
 LazyData: true
-Imports: dplyr;stringr
+Imports: dplyr,stringr
 Suggests: testthat,
     knitr,
     rmarkdown

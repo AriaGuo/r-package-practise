@@ -1,7 +1,7 @@
-#' reorder letters according alphabetical orderap
+#' reorder letters according to alphabetical order
 #'
-#' @param random letter
-#' @param
+#' @param x random letter
+#'
 #'
 #' @return ordered letter
 #' @export
