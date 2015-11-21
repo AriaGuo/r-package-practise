@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   comment = "#>")
 ```
 
-This foo package is built based on the method in  [foofactor](https://github.com/STAT545-UBC/foofactors). The goal of this package is to practice how to develop an R package^[Write your own R package](http://stat545-ubc.github.io/packages00_index.html)]. I wrote two function in the package:
+This foo package is built based on the method used in Jenny's [foofactor](https://github.com/STAT545-UBC/foofactors). The goal of this package is to practice how to develop an R package[Write your own R package](http://stat545-ubc.github.io/packages00_index.html). I wrote two function in the package:
 
 - `string_bind()`
 - `letter_order()`
