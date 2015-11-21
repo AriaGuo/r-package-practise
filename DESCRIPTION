@@ -2,7 +2,7 @@ Package: foo
 Title: Binding and Reordering characters
 Version: 0.0.0.9000
 Authors@R: person("Aria", "Guo", email = "aria.guo@example.com", role = c("aut", "cre"))
-Description: two functions for :binding character with unique value; reorder letters alphabetically.
+Description: two functions: bind character with unique or duplicated value; sort letters alphabetically or counter alphabetically.
 Depends: R (>= 3.2.2)
 License: MIT+ file LICENSE
 LazyData: true

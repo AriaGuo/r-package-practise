@@ -4,12 +4,14 @@
 \alias{string_bind}
 \title{Bind two string characters}
 \usage{
-string_bind(a, b)
+string_bind(a, b, method = "UNIQUE")
 }
 \arguments{
 \item{a}{character}
 
 \item{b}{character}
+
+\item{method;}{find unique characters or duplicated characters}
 }
 \value{
 character

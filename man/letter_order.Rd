@@ -4,10 +4,12 @@
 \alias{letter_order}
 \title{reorder letters according to alphabetical order}
 \usage{
-letter_order(x)
+letter_order(x, normal.sort = TRUE)
 }
 \arguments{
 \item{x}{random letter}
+
+\item{normal.sort}{boolean; define the sorting method wheather ascending or descending}
 }
 \value{
 ordered letter

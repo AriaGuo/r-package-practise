@@ -1,6 +1,6 @@
 ---
-title: "Vignette Title"
-author: "Vignette Author"
+title: "foo"
+author: "Aria Guo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -8,51 +8,38 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
-
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
-
-## Vignette Info
-
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
-
-## Styles
-
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>")
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+This foo package is built based on the method in  [foofactor](https://github.com/STAT545-UBC/foofactors). The goal of this package is to practice how to develop an R package^[Write your own R package](http://stat545-ubc.github.io/packages00_index.html)]. I wrote two function in the package:
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
+- `string_bind()`
+- `letter_order()`
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+###Installation
+```{r eval=FALSE}
+devtools::install_github("AriaGuo/r-package-practise")
+library(foo)
 ```
 
-Also a quote using `>`:
+###First function
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+The first function **string_bind**is to bind two string characters into one string with unique values(default) or duplicated value. Based on the unit test result, this function works on any characters but with some exceptions. See notation in testthat.R for detail.
+
+```{r eval=FALSE}
+>string_bind("abc","bcde",method = "UNIQUE"")
+[1] "abcde"
+```
+
+###Second function
+
+The second function **letter_order** is to reorder input letter in a alphabetical order (default) or counter alphabetical order.Based on the unit test resutls, the function cannot handle white space, and letters with mixed capitalization very well. See examples in testthat.R
+
+```{r eval=FALSE}
+>letter_order("A,Z,U,O",normal.sort=TRUE)
+[1] "A,O,U,Z"
+```
+
