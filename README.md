@@ -12,16 +12,17 @@ Here's how to use the `foo` package.There are two function contained in the pack
 
 ### First Function
 
-The first function **string\_bind**is to bind two string characters into one string with ethier unique values (defaults) or duplicated values. For the "duplicated" method, this function returns duplicated letters and the length of the returned value depends on how many times the letters are duplicated.
-
-For example, inputs:" abb","bbc", method="duplicated"; outputs: "bbb" (letter b duplicated three times)
-
-Based on the unit test result, this function works on any characters but with some exception. See notation in testthat.R for detail.
+The first function **string\_bind**is to bind two string characters into one string with ethier unique values (defaults) or duplicated values. Based on the unit test result, this function works on any characters but with some exception. See notation in testthat.R for detail.
 
 ``` r
 library(foo)
 string_bind("abc","bcde",method = "UNIQUE")
 ```
+
+For the "duplicated" method, this function returns duplicated letters and the length of the returned value depends on how many times the letters are duplicated.
+
+For example, inputs:" abb","bbc", method="duplicated"; outputs: "bbb" (letter b duplicated three times)
+
 
 ### Second Function:
 
