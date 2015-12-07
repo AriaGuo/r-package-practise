@@ -27,11 +27,14 @@ library(foo)
 
 ###First function
 
-The first function **string_bind**is to bind two string characters into one string with unique values(default) or duplicated value. Based on the unit test result, this function works on any characters but with some exceptions. See notation in testthat.R for detail.
+The first function **string_bind**is to bind two string characters into one string with unique values(default) or duplicated value. For the "duplicated" method, this function returns duplicated letters and the length of the returned value depends on how many times the letters are duplicated.Based on the unit test result, this function works on any characters but with some exceptions. See notation in testthat.R for detail.
 
 ```{r eval=FALSE}
->string_bind("abc","bcde",method = "UNIQUE"")
+>string_bind("abc","bcde",method = "UNIQUE")
 [1] "abcde"
+>string_bind("abc","bcde",method = "DUPLICATED")
+[1] "bbb"
+## letter b duplicated three times
 ```
 
 ###Second function
